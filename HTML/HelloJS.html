@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloJS</title>
+</head>
+<body>
+<h1>My First Web Page</h1>
+<script>
+  x = 5 + "5";
+  document.write("<h2>x</h2>");
+
+  var age = 16;
+  if (age < 18) document.write("Too young");
+
+</script>
+<p id="demo"> My First Paragraph.</p>
+<button onclick="myFunction('pxj','CEO')">点击</button>
+<script>
+  function myFunction(name, job) {
+//    document.write("糟糕!文档消失了.");
+//    alert("Welcome " + name + ", the " + job);
+//    var x = "";
+//    var time = new Date().getHours();
+//    if (time < 22)
+//    {
+//      x = "Good day"
+//    }
+//
+//    var day = new Date().getDay();
+//    switch (day)
+//    {
+//      case 0:
+//        x="Today it's Sunday";
+//        break;
+//      case 1:
+//        x="Today it's Monday";
+//        break;
+//      case 2:
+//        x="Today it's Tuesday";
+//        break;
+//      case 3:
+//        x="Today it's Wednesday";
+//        break;
+//      case 4:
+//        x="Today it's Thursday";
+//        break;
+//      case 5:
+//        x="Today it's Friday";
+//        break;
+//      case 6:
+//        x="Today it's Saturday";
+//        break;
+//      default:
+//        x="ni mei";
+//    }
+//
+//    document.getElementById("demo").innerHTML = x;
+
+//    cars = ["BMW","Volvo","Saab","Ford"];
+//
+//    for (var i = 0; i<cars.length;i++)
+//    {
+//      document.write(cars[i] + "<br>");
+//    }
+	  /*
+	   var ll;
+	   var txt ="";
+	   var person = {fname:"Bill",lname:"Gates",age:56};
+	   for (x in person)
+	   {
+	   txt = txt + person[x];
+	   }
+
+	   document.getElementById("demo").innerHTML = txt;
+	   */
+	  /*
+	   var x = "",i=0;
+	   while (i<5)
+	   {
+	   x = x + "The number is " + i + "<br>";
+	   i ++;
+	   }
+	   document.getElementById("demo").innerHTML = x;
+	   */
+	  /*
+	   var x= "",i=0;
+	   for (i = 0;i<10;i ++)
+	   {
+	   if (i == 3) continue;
+	   x = x + "The number is " + i + "<br>";
+	   }
+	   document.getElementById("demo").innerHTML = x;
+	   */
+
+	  /*
+	   cars = ["BMW","Volvo","Saab","Ford"];
+	   list:
+	   {
+
+	   }
+	   */
+  }
+
+  person = {};
+  person.firstname = "pxj";
+  person.lastname = "Gates";
+  person.age = 28;
+  person.eyecolor = "black";
+  document.write(person.firstname + "is" + person.age + "years old.")
+</script>
+
+<script>
+  var txt = "";
+  function message() {
+	  try {
+		  adddlert("Welcome guest!");
+	  }
+	  catch (err) {
+		  txt = "There was an error on this page.\n\n";
+		  txt += "Error description: " + err.message + "\n\n";
+		  txt += "Click OK to continue.\n\n";
+		  alert(txt);
+	  }
+  }
+</script>
+
+<script>
+  function catchErr() {
+	  try {
+		  var x = document.getElementById("catchErr").value;
+		  if (x == "") throw "empty";
+		  if (isNaN(x)) throw "not a number";
+		  if (x > 10) throw "too high";
+		  if (x < 5) throw "too low";
+	  }
+	  catch (err) {
+		  var y = document.getElementById("mess");
+		  y.innerHTML = "Error: " + err + ".";
+	  }
+  }
+</script>
+
+<!--<input type="button" value="View message" onclick="message()">-->
+<input id="catchErr" type="text">
+<button type="button" onclick="catchErr()">
+  Test Input
+</button>
+<p id="mess"></p>
+</body>
+</html>

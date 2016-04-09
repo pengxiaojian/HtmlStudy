@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>透明图像</title>
+  <style>
+img {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+
+img:hover {
+	opacity: 1.0;
+}
+
+  </style>
+</head>
+<body>
+<h1>
+  图像透明度
+</h1>
+<img src="../IMG/test.png" alt="TEST"/>
+<p><b>注释：</b>在 IE 中，必须添加 <!DOCTYPE>，这样才能将 :hover 选择器用于除了 <a> 之外的其它元素。</p>
+</body>
+</html>

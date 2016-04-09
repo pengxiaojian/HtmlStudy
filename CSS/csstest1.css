@@ -1,0 +1,22 @@
+h1 {
+    color: blue;
+    border: 1pt solid red;
+    border-bottom-width: thick;
+    margin-right: 10%;
+}
+
+p {
+    color: purple;
+    background-color: #EFE7D6;
+    border: 8pt solid purple;
+}
+
+div {
+    color: #800080;
+    background-color: purple;
+}
+
+span {
+    color: #000000;
+    background-color: #FFFFFF;
+}
