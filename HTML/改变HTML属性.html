@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>改变HTML属性</title>
+	<title>改变HTML属性</title>
+	<style>
+	img#image {
+		position: absolute;
+		left: 300px;
+		top: 10px;
+		z-index: -1;
+	}
+	</style>
 </head>
 <body>
-<script>
-	document.getElementsByName(
-			kdkfdf
-	)
-</script>
-<p id="p1"> Hello World!</p>
+<p id="p1" onclick="responsText(this)"> 点击该文本</p>
 <p id="p2"> Hello World!</p>
 <h1 id="id1">My Heading 1</h1>
 <img id="image" src="../IMG/headIcon.png" width="230" height="254">
@@ -54,16 +57,29 @@
 
   /**
    * 隐藏文本
-   * @param {object} test
    */
-  function hideText(test) {
-
+  function hideText() {
+	  document.getElementById('p2').style.visibility = 'hidden';
   }
 
+  /**
+   * 显示文本
+   */
+  function showText() {
+	  document.getElementById('p2').style.visibility = 'visible';
+  }
+
+  /**
+   *
+   * @param id
+   */
+  function responsText(id) {
+	  id.innerHTML = "谢谢";
+  }
 </script>
 
-
-
+<input type="button" value="隐藏文本" onclick="hideText()"/>
+<input type="button" value="显示文本" onclick="showText()"/>
 
 </body>
 </html>
