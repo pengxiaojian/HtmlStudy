@@ -16,8 +16,11 @@
 		  alert("未启用 cookie")
 	  }
   }
+  function closeCookies() {
+	  alert("加载完成")
+  }
 </script>
-<body onload="checkCookies()">
+<body onload="checkCookies()" onunload="closeCookies()">
 <p>提示框会告诉你，浏览器是否已启用 cookie</p>
 </body>
 </html>
